@@ -20,11 +20,40 @@ git config --global user.email "123456xxx@gmail.com"
 
 # zsh
 
-```bash 
+## config in a fresh machine
+```bash
+sudo apt-get install zsh
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # ":-" means using ZSH_CUSTOM if it's not null, else using the after.
 # check details by `man bash and search ${parameter:-word}`
+
+vim ~/.zshrc
+#replace ZSH_THEME="powerlevel10k/powerlevel10k"
+
+source ~/.zshrc
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
+
+vim ~/.zshrc
+
+# plugins=(
+#     # other plugins...
+#     z
+#     zsh-syntax-highlighting  # 插件之间使用空行
+# )
+
+source ~/.zshrc
+    
 ```
+```
+reference link: https://zhuanlan.zhihu.com/p/441676276
+
+```bash 
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 
 
 
