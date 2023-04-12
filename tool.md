@@ -46,6 +46,8 @@ vim ~/.zshrc
 # )
 
 source ~/.zshrc
+
+# if you need reinstall, run p10k configure
     
 ```
 ```
