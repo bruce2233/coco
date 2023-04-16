@@ -47,6 +47,7 @@ vim ~/.zshrc
 
 source ~/.zshrc
     
+# p10k configure
 ```
 ```
 reference link: https://zhuanlan.zhihu.com/p/441676276
@@ -60,3 +61,10 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # git
 
 `git clone xxx.git abc #do not create xxx directory`
+
+
+`distribution=$(. /etc/os-release;echo $ID$VERSION_ID)`
+# ; is a sep
+
+# wsl
+`echo [boot]\nsystemd=true >> /etc/wsl.conf`
