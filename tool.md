@@ -65,8 +65,44 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 `git clone xxx.git abc #do not create xxx directory`
 
 
-`distribution=$(. /etc/os-release;echo $ID$VERSION_ID)`
-# ; is a sep
+```bash
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+# ; is a separator
+
+```
+
 
 # wsl
 `echo [boot]\nsystemd=true >> /etc/wsl.conf`
+
+```bash
+echo "export PATH=$PATH:/usr/lib/wsl/lib" >> ~/.zshrc #for nvidia-smi
+echo "export PATH=$PATH:/usr/local/cuda-12.1/bin` >> ~/.zshrc #for nvcc
+#link: https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local
+```
+
+
+# curl
+```bash
+curl -fsSL
+# -f --fail : fail silently to avoid outputting html error infomation
+# -s --silent
+# -S --show-error
+# -L --location : get redirected html
+```
+# docker 
+
+docker run --gpus all \
+-it \
+-v /mnt/g/github/consistency_models:/app/cm \
+--network host \
+--rm \
+nvcr.io/nvidia/pytorch:23.03-py3 bash
+
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+
+echo -e "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse\ndeb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse\ndeb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse\ndeb http://security.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse" > /etc/apt/sources.list
+
+apt 
+apt install -y proxychains4
+
