@@ -74,10 +74,11 @@ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 
 # wsl
 `echo [boot]\nsystemd=true >> /etc/wsl.conf`
+`#for Windows WSL: ubuntu config --default-user your-not-root-username`
 
 ```bash
 echo "export PATH=$PATH:/usr/lib/wsl/lib" >> ~/.zshrc #for nvidia-smi
-echo "export PATH=$PATH:/usr/local/cuda-12.1/bin` >> ~/.zshrc #for nvcc
+echo "export PATH=$PATH:/usr/local/cuda-12.1/bin" >> ~/.zshrc #for nvcc
 #link: https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local
 ```
 
@@ -91,7 +92,7 @@ curl -fsSL
 # -L --location : get redirected html
 ```
 # docker 
-
+```bash
 docker run --gpus all \
 -it \
 -v /mnt/g/github/consistency_models:/app/cm \
@@ -105,4 +106,5 @@ echo -e "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted 
 
 apt 
 apt install -y proxychains4
+```
 
