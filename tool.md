@@ -92,6 +92,7 @@ curl -fsSL
 # -L --location : get redirected html
 ```
 # docker 
+docker run -it --runtime nvidia nvidia/cuda:12.1.0-devel-ubuntu20.04 /bin/bash
 ```bash
 docker run --gpus all \
 -it \
