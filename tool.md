@@ -105,7 +105,34 @@ cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
 echo -e "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse\ndeb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse\ndeb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse\ndeb http://security.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse" > /etc/apt/sources.list
 
-apt 
-apt install -y proxychains4
+
+#docker run -it  --name infallible_bassi nvidia/cuda:11.8.0-devel-ubuntu20.04 /bin/bash 
+docker run -it  --runtime nvidia --name infallible_bassi pytorch/pytorch:2.0.0-cuda11.7-cudnn8-devel  /bin/bash
+
+docker cp /etc/apt/sources.list   infallible_bassi:/etc/apt/sources.list && docker cp download/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh infallible_bassi:/root/
+
+pypi-server run  ~/pspkgs
+
+
+apt update && apt install -y proxychains4 vim git libopenmpi-dev g++ wget
+
+vim /etc/proxychains4.conf #socks5 172.19.0.1 10810
+
+cd /root && bash Miniconda3-py310_23.1.0-1-Linux-x86_64.sh && su -
+
+
+proxychains pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 \
+--extra-index-url http://172.19.3.206:8080/simple \
+--trusted-host 172.19.3.206
+
+wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.4.tar.gz
+tar -zxvf openmpi-4.0.4.tar.gz
+cd openmpi-4.0.4
+./configure
+proxychains git clone https://github.com/bruce2233/consistency_models.git
+
+cd consistency_models && proxychains pip install -e .
 ```
+
+# docker rm infallible_bassi
 
