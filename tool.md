@@ -135,4 +135,4 @@ cd consistency_models && proxychains pip install -e .
 ```
 
 # docker rm infallible_bassi
-
+ssh-keygen -f "/home/bruce/.ssh/known_hosts" -R "45.63.53.170"
