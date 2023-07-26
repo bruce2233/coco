@@ -25,3 +25,10 @@ code ~/.condarc
 conda clean -i
 #清除索引
 ```
+
+## import
+sys.path会添加python文件的所在的目录, 而不会添加$pwd
+python会检查sys.path中内容
+绝对路径引用的不是文件系统的路径, 而是python包的路径. 
+解决办法1: PYTHONPATH=$(pwd) + cmd, argument must be the first position instead of 'cmd + PYTHONPATH=$(pwd)' 
+解决方法2: 在导入包之前sys.path.append(os.getcwd())
