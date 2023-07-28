@@ -63,7 +63,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # git
 
 `git clone xxx.git abc #do not create xxx directory`
+`git push -f origin HEAD~1:main` //回退remote 
 
+`git log `
 
 ```bash
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
@@ -136,3 +138,7 @@ cd consistency_models && proxychains pip install -e .
 
 # docker rm infallible_bassi
 ssh-keygen -f "/home/bruce/.ssh/known_hosts" -R "45.63.53.170"
+
+# less
+'/': search
+n: next search result 
