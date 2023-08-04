@@ -142,3 +142,20 @@ ssh-keygen -f "/home/bruce/.ssh/known_hosts" -R "45.63.53.170"
 # less
 '/': search
 n: next search result 
+
+# linux distribution file structure 
+Under the `/usr` directory in Linux, there are several subdirectories with specific purposes. Here are a few commonly found subdirectories under `/usr` and their explanations:
+
+1. `/usr/bin`: This directory contains executable files that are available to all users of the system. These binaries are typically essential system programs or commonly used commands.
+
+2. `/usr/local`: This directory is used for installing software and files that are specific to the local system. It is primarily intended for software that is not managed by the system's package manager, but manually installed or compiled from source.
+
+3. `/usr/include`: This directory contains header files that are necessary for compiling software on the system. Header files are commonly used in C and C++ programming to include function prototypes and definitions.
+
+4. `/usr/lib`: This directory stores libraries (shared object files) that are required by the programs installed on the system. These libraries provide reusable functions and resources for software development.
+
+5. `/usr/share`: This directory contains architecture-independent data files shared among different binaries and programs. It often includes documentation, icons, fonts, and other resources that are used by multiple applications.
+
+6. `/usr/sbin`: Similar to `/usr/bin`, this directory holds executable files, but they are primarily administrative or system utilities that are typically executed by the system administrator rather than regular users.
+
+Please note that the above explanations provide a general overview of these directories, but the exact structure and contents may vary depending on the Linux distribution and system configuration. It's always recommended to refer to the documentation or specific guidelines of your distribution for more accurate details.
