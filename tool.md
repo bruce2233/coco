@@ -159,3 +159,6 @@ Under the `/usr` directory in Linux, there are several subdirectories with speci
 6. `/usr/sbin`: Similar to `/usr/bin`, this directory holds executable files, but they are primarily administrative or system utilities that are typically executed by the system administrator rather than regular users.
 
 Please note that the above explanations provide a general overview of these directories, but the exact structure and contents may vary depending on the Linux distribution and system configuration. It's always recommended to refer to the documentation or specific guidelines of your distribution for more accurate details.
+
+# linux 目录及FHS标准
+https://zhuanlan.zhihu.com/p/107263805
