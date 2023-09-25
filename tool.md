@@ -162,3 +162,17 @@ Please note that the above explanations provide a general overview of these dire
 
 # linux 目录及FHS标准
 https://zhuanlan.zhihu.com/p/107263805
+
+# v2ray linux deploy
+```shell
+mkdir /etc/v2ray/config.json
+# FHS 版本, 安裝執行檔和 .dat 資料檔
+# bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
+
+```
+
+# tar and openssl for enc dir
+```shell
+tar -czf - v2ray-linux-64 | openssl enc -e -aes256 -out test.tar.gz
+openssl enc -d -aes256 -in abc.tar.gz | tar -xz -C /tmp
+```
