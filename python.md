@@ -35,3 +35,8 @@ python会检查sys.path中内容
 
 ##  .py文件 jupyter 支持
 '''# %%''' 作为分隔符
+
+## VSCode 调试
+1. cwd: ${workspaceFolder}/your-project
+2. program: (cwd+)file_path
+3. args: ["",""......]
