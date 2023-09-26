@@ -165,10 +165,12 @@ https://zhuanlan.zhihu.com/p/107263805
 
 # v2ray linux deploy
 ```shell
-mkdir /etc/v2ray/config.json
+mkdir /etc/v2ray/
+vim /etc/v2ray/config.json
+#paste config.json from cli
 # FHS 版本, 安裝執行檔和 .dat 資料檔
 # bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
-
+v2ray run -c /etc/v2ray/config.json
 ```
 
 # tar and openssl for enc dir
