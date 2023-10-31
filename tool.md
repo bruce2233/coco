@@ -178,3 +178,24 @@ v2ray run -c /etc/v2ray/config.json
 tar -czf - v2ray-linux-64 | openssl enc -e -aes256 -out test.tar.gz
 openssl enc -d -aes256 -in abc.tar.gz | tar -xz -C /tmp
 ```
+
+# vscode 
+## keyboard shorts strategy
+### Editor
+`ctrl + 1`: focus editor
+`ctrl + page up`: previous tab
+`ctrl + page down`: next tab
+
+### Terminal
+`ctrl + j`: focus terminal
+`ctrl + j`: close terminal when already focusing on terminal
+`ctrl + shift + \`: focus on terminal tab views, and use `arrow up`,`arrow down`and enter to change terminal index
+`ctrl + alt + r`: run recent commands
+### Explorer
+`ctrl + shift + o`: focus to the current file in the explorer
+`ctrl + f`: search dir/file
+
+### Commands
+`ctrl + shift + p`: all commands. = `ctrl + e` and input '>'
+`ctrl + e`: search file by name(recently opened), use '@' to go to symbol
+`symbol`: function, class, md heading, etc. Very cool and useful.

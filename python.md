@@ -26,6 +26,10 @@ conda clean -i
 #清除索引
 ```
 
+## pip
+pip config edit --editor vim
+pip cache list
+
 ## import
 sys.path会添加python文件的所在的目录, 而不会添加$pwd
 python会检查sys.path中内容

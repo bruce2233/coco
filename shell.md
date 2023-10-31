@@ -16,3 +16,10 @@
 ## history 命令
 
 ## \ 换行后一定不能有空格jobs -l
+
+## zshell 
+keybind for backward or forward word 
+```shell
+bindkey -M emacs '^[[1;5C' forward-word
+bindkey -M emacs '^[[1;5D' backward-word
+```
