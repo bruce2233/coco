@@ -23,3 +23,5 @@ keybind for backward or forward word
 bindkey -M emacs '^[[1;5C' forward-word
 bindkey -M emacs '^[[1;5D' backward-word
 ```
+## kill
+kill %1 #结束后台session为1的进程(非PID)
