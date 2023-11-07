@@ -30,6 +30,10 @@ wd不变, stage清空, wd的changes=HEAD + <commit>
 ### git reset --hard <commit>
 wd清除, 与<commit>的diff=0
 
+## git merge
+### 冲突处理
+处理完冲突后`git commit -m '<MERGE_MSG>'`
+
 # zsh
 
 ## config in a fresh machine
