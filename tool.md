@@ -18,6 +18,18 @@
 git config --global user.name "I am xxx"
 git config --global user.email "123456xxx@gmail.com"
 
+## git reset的三种模式
+首先, 明确history, stage, working directory 三个概念
+### git reset --soft <commit>
+wd 不变, stage缓存HEAD和<commit> diff. 即这个时候直接commit就可以回到head.
+wd和stage的diff就是原wd和HEAD的diff
+
+### git reset <commit>
+= git reset --mixed <commit>
+wd不变, stage清空, wd的changes=HEAD + <commit>
+### git reset --hard <commit>
+wd清除, 与<commit>的diff=0
+
 # zsh
 
 ## config in a fresh machine
