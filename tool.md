@@ -201,6 +201,8 @@ openssl enc -d -aes256 -in abc.tar.gz | tar -xz -C /tmp
 `ctrl + 1`: focus editor
 `ctrl + page up`: previous tab
 `ctrl + page down`: next tab
+`shift + alt +c`: copy current file path
+`ctrl + g, ctrl +c`: copy current line github permalink (customized)
 
 ### Terminal
 `ctrl + j`: focus terminal
@@ -215,3 +217,4 @@ openssl enc -d -aes256 -in abc.tar.gz | tar -xz -C /tmp
 `ctrl + shift + p`: all commands. = `ctrl + e` and input '>'
 `ctrl + e`: search file by name(recently opened), use '@' to go to symbol
 `symbol`: function, class, md heading, etc. Very cool and useful.
+<!-- `ctrl + g`: =`ctrl + e` and input `:`, navigate to specified line. -->
